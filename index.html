@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Reconocimiento Banco</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+
+    <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 10; color: white; font-family: sans-serif; background: rgba(0,0,0,0.5);">
+        Apunta a la imagen para ver tu trofeo
+    </div>
+
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false;">
+        
+        <a-marker type="pattern" url="https://drive.google.com/uc?export=download&id=1dLA1CTox8sJ6W0vZp5OxoJzgwDJN6Lhj">
+            
+            <a-image 
+                src="https://drive.google.com/uc?export=download&id=1sNp1ke1ZdbA3lDIx2mnOnQJX4chtKs7n" 
+                position="0 1 0" 
+                rotation="-90 0 0" 
+                width="2" 
+                height="2">
+            </a-image>
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>

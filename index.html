@@ -10,8 +10,8 @@
 
 <body style="margin: 0px; overflow: hidden;">
 
-    <div style="position: fixed; top: 20px; width: 100%; text-align: center; z-index: 10; color: white; font-family: sans-serif; background: rgba(0,0,0,0.5); padding: 10px; pointer-events: none;">
-        Enfoca el marcador trofeo_CF para ver tu premio
+    <div style="position: fixed; top: 20px; width: 100%; text-align: center; z-index: 10; color: white; font-family: sans-serif; background: rgba(0,0,0,0.5); padding: 10px; pointer-events: none; border-radius: 5px;">
+        Enfoca el marcador impreso para ver tu trofeo
     </div>
 
     <a-scene 
@@ -22,16 +22,17 @@
         <a-marker type="pattern" url="https://raw.githubusercontent.com/Gabyagabs/reconocimiento-CF2026/main/pattern-trofeo_CF.patt">
             
             <a-image 
-                src="https://drive.google.com/uc?export=download&id=1sNp1ke1ZdbA3lDIx2mnOnQJX4chtKs7n" 
+                src="https://raw.githubusercontent.com/Gabyagabs/reconocimiento-CF2026/main/trofeo_CF_ch.gif" 
                 position="0 1 0" 
                 rotation="-90 0 0" 
-                width="2.2" 
-                height="2.2">
+                width="2.5" 
+                height="2.5">
             </a-image>
 
         </a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
+
 </body>
 </html>

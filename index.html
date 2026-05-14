@@ -3,21 +3,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Prueba Raw CF</title>
+    <title>Trofeo Animado CF 2026</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
+    
+    <script src="https://rawcdn.githack.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
 
-    <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 10; color: white; background: rgba(0,0,0,0.8); padding: 10px;">
-        Leyendo archivo crudo (Cubo Rojo)
+    <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 10; color: white; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 5px;">
+        Apunta a Hiro para ver tu trofeo animado
     </div>
 
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="logarithmicDepthBuffer: true;">
         
-        <a-marker type="pattern" url="https://raw.githubusercontent.com/Gabyagabs/reconocimiento-CF2026/main/pattern-cf2.patt">
+        <a-assets>
+            <img id="gif-source" src="trofeo_CF_ch.gif">
+        </a-assets>
+
+       <a-marker type="pattern" url="https://github.com/Gabyagabs/reconocimiento-CF2026/blob/main/pattern-cf-final.patt">
             
-            <a-box position="0 0.5 0" color="red" scale="1.5 1.5 1.5"></a-box>
+            <a-entity 
+                id="mi-trofeo"
+                geometry="primitive: plane; width: 2; height: 3.5" 
+                material="shader: gif; src: #gif-source; transparent: true; alphaTest: 0.5;" 
+                rotation="-90 0 0" 
+                position="0 1.5 0">
+            </a-entity>
 
         </a-marker>
 

@@ -3,26 +3,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Trofeo en Hiro</title>
+    <title>Trofeo Local</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
 
     <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 10; color: white; background: rgba(0,0,0,0.8); padding: 10px;">
-        Apunta a Hiro para ver tu trofeo
+        Apunta a Hiro (Ruta local)
     </div>
 
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         
+        <a-assets>
+            <img id="mi-trofeo" src="trofeo_CF_ch.gif">
+        </a-assets>
+
         <a-marker preset="hiro">
             
             <a-image 
-                src="https://raw.githubusercontent.com/Gabyagabs/reconocimiento-CF2026/main/trofeo_CF_ch.gif" 
+                src="#mi-trofeo" 
                 position="0 1 0" 
                 rotation="-90 0 0" 
                 width="2.5" 
-                height="2.5">
+                height="2.5"
+                transparent="true">
             </a-image>
 
         </a-marker>
